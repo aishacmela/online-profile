@@ -7,6 +7,7 @@
     --darkgreen: #61892f;
     --background: #1A1A1A ;
     --transition: all 0.5s ease;
+    --btn-font: "Montserrat";
 }
 *{
     padding: 0;
@@ -38,16 +39,17 @@ h1, h2, h3, h4, h5, h6 p{
 
 
 .btn{
-    background: var(--darkgreen);
+    background: var(--white);
     border : none;
     display: block;
     width: 150px;
     text-align: center;
-    color: var(--white);
+    color: var(--background);
     text-transform: uppercase;
     font-size: 15px ;
+    font-family: var(--btn-font);
+    font-weight: 700;
     padding: 12px;
-    border: 2px solid var(--darkgreen);
     border-radius: 35px;
     margin: 15px 0;
     transition: var(--transition);
@@ -68,18 +70,12 @@ h1, h2, h3, h4, h5, h6 p{
 
 
 .header{
-    min-height: 90vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url(/image/camera.jpg) center/cover no-repeat ;
     color: var(--white);
 }
 .about{
     padding-top:110px;
-}
-
-.about-content {
-   width: 800px;
-   display: block;
-   margin: auto;
 }
 
 h1 {
@@ -96,36 +92,26 @@ h2 {
 }
 
 
-blockquote {
+header p {
     font-size: 24px;
     font-weight: 300;
     opacity: 0.9;
     text-align: center;
-}
-blockquote span {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: var(--darkGreen);
-    font-weight: 300;
-    letter-spacing: 5px;
+    max-width: 800px;
     display: block;
+    margin: auto ;
+    
 }
-blockquote span {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: var(--darkGreen);
-    font-weight: 300;
-    letter-spacing: 5px;
-    display: block;
+
+.social-icons ul {
+    display: flex;
+    justify-content: space-around;
 }
+
 .social-icons {
     width: 350px;
     margin: 40px auto 0 auto;
     padding-bottom: 30px;
-}
-.social-icons ul {
-    display: flex;
-    justify-content: space-around;
 }
 
 .social-icons ul a {
@@ -138,6 +124,7 @@ blockquote span {
     justify-content: center;
     transition: var(--transition);
 }
+
 .social-icons ul a:hover {
     background: var(--lightGreen);
     border-color: var(--lightGreen);
@@ -167,7 +154,7 @@ section{
     font-size: 40px;
 }
 
-.section-two span {
+.section-two span a {
     color: var(--lightGreen);
     text-align: center;
     display: block;
@@ -268,26 +255,29 @@ footer h4{
 } 
 
 
-.about-section h2{
+.about-section h3{
     font-size: 64px;
     font-weight: bold;
 }
-.about-section h3{
+.about-section h4{
     color: var(--lightGreen);
+}
+.about-section p{
+    line-height: 2;
 }
 .cam-icon{
     font-size: 18px;
     padding: 10px 15px;
     background: rgba(255, 255, 255, 0.1);
 }
-.about-imgs{
+/* .about-imgs{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 350px;
     grid-auto-flow: dense;
-}
+} */
 .about-imgs img:hover{
-    transform: scale(1.1);
+    transform: scale(1.5);
 }
 .contacts{
     min-height: 85vh;
@@ -299,13 +289,13 @@ footer h4{
 }
 
 .contact-content a{
-    color: white;
+    color: var(--lightGreen);
 }
 
 .contact-content i{
     font-size: 22px;
 }
-.contact-content .btn{
+.contacts .btn{
     display: block;
     margin: 50px auto;
 
