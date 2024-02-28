@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 p{
 
 
 .header{
-    min-height: 100vh;
+    min-height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url(/image/camera.jpg) center/cover no-repeat ;
     color: var(--white);
 }
@@ -87,14 +87,15 @@ h1 {
     text-align: center;
     letter-spacing: 5px;
 }
-.about h2 {
+h2 {
     color: #fff;
     font-size: 72px;
-    padding: 10px 15px;
     font-weight: 500;
-    text-align: center;
-    
+    margin: 0;
+    text-align: center;  
 }
+
+
 blockquote {
     font-size: 24px;
     font-weight: 300;
@@ -205,9 +206,11 @@ footer{
     color: var(--white);
     padding: 20px;
 }
-footer h2{
+footer h4{
     margin: 0;
+    font-weight: 700;
 }
+
 
 .footer a{
     color: var(--lightGreen);
@@ -216,6 +219,9 @@ footer h2{
 .footer-content{
     display: flex;
     justify-content: space-between;
+}
+.footer-contact a{
+    margin-left: 15px;
 }
 
 .gallery-section, .about-section{
@@ -239,7 +245,9 @@ footer h2{
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+    transition: var(--transition);
 }
+
 .gallery-img {
     display: grid;
     grid-gap: 10px;
@@ -248,7 +256,7 @@ footer h2{
     grid-auto-flow: dense;
 }
 
-.v-strech {
+.v-strech{
     grid-row: span 2;
 }
 .b-stretch{
@@ -257,7 +265,7 @@ footer h2{
 }
 .h-stretch{
     grid-column: span 2;
-}
+} 
 
 
 .about-section h2{
@@ -277,9 +285,14 @@ footer h2{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 350px;
     grid-auto-flow: dense;
-
 }
-
+.about-imgs img:hover{
+    transform: scale(1.1);
+}
+.contacts{
+    min-height: 85vh;
+    width: 100%;
+}
 .contact-content{
     text-align: center;
     margin-top:80px ;
@@ -292,29 +305,38 @@ footer h2{
 .contact-content i{
     font-size: 22px;
 }
-h4{
-    color: var(--darkgreen);
+.contact-content .btn{
+    display: block;
+    margin: 50px auto;
+
+}
+
+.booking   {
+    text-align: center;
+}
+.booking h3 {
+    font-size: 38px;
 }
 
 
 
 
-@media (max-width: 800px){
+@media (max-width: 780px){
     h1{
-        font-size: 34px ;
+        font-size: 30px ;
     }
     h2{
-        font-size: 28px;
+        font-size: 60px;
     }
     .about-content{
         text-align: center;
         max-width: 100%;
-        padding-top: 50px;
+        padding-top: 60px;
     }
     .gallery-img {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
         grid-auto-rows: 200px;
         grid-auto-flow: dense;
     }
@@ -322,8 +344,19 @@ h4{
         display: block;
         text-align: center;
     }
-       
-
+    .social-icons{
+        margin-top: 150px;
+    }
+    .contact-content {
+        text-align: center;
+        margin-top: 150px;
+        }
 }
+/* @media (max-width: 1024px){
+    .footer-content{
+        display: block;
+        text-align: center;
+    }
+} */
 
 
