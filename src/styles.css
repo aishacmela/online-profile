@@ -31,6 +31,11 @@ h1, h2, h3, h4, h5, h6 p{
     margin: 15px 0;
 
 }
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .btn{
     background: var(--white);
@@ -160,6 +165,7 @@ section{
 .insta-imgs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
 }
 
 .insta-imgs>div {
@@ -192,6 +198,11 @@ footer h4{
     margin: 0;
     font-weight: 700;
 }
+footer p{
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+}
 
 
 .footer a{
@@ -217,12 +228,12 @@ footer h4{
     vertical-align: middle;
     display: inline-block;
 }
-.gallery-img > div, .about-imgs > div{
+.gallery-img > div, .about-imgs > img{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.gallery-img > a > img, .about-imgs > div > img{
+.gallery-img > a > img, .about-imgs > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -230,7 +241,7 @@ footer h4{
     transition: var(--transition);
 }
 
- .gallery-img {
+ .gallery-img, .about-imgs {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -265,14 +276,14 @@ footer h4{
     padding: 10px 15px;
     background: rgba(255, 255, 255, 0.1);
 }
-/* .about-imgs{
+.about-imgs{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 350px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 400px;
     grid-auto-flow: dense;
-} */
+}
 .about-imgs img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .contacts{
     min-height: 85vh;
