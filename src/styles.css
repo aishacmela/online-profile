@@ -26,6 +26,7 @@ img{
 a{
     text-decoration: none;
     color: #000;
+    color: var(--lightGreen);
 }
 h1, h2, h3, h4, h5, h6 p{
     margin: 15px 0;
@@ -50,21 +51,22 @@ h1, h2, h3, h4, h5, h6 p{
     font-weight: 700;
     padding: 12px;
     border-radius: 35px;
-    margin: 15px 0;
+    display: block;
+    margin: 30px auto;
     transition: var(--transition);
 }
 .btn:hover {
     width: 170px;
 }
 .active{
-    color: #005B91 !important;
+    color: var(--lightGreen) !important;
 }
 .navbar-brand {
     letter-spacing: 5px;
     cursor: pointer;
 }
 .nav-item a:hover{
-    color: #005B91 !important;
+    color: var(--lightGreen) !important;
 }
 
 
@@ -79,7 +81,7 @@ h1, h2, h3, h4, h5, h6 p{
 
 h1 {
     font-size: 24px;
-    color: #005B91;
+    color: var(--lightGreen);
     text-align: center;
     letter-spacing: 5px;
 }
@@ -89,6 +91,9 @@ h2 {
     font-weight: 500;
     margin: 0;
     text-align: center;  
+}
+h4{
+    font-size: 30px;
 }
 
 
@@ -123,11 +128,13 @@ header p {
     display: flex;
     justify-content: center;
     transition: var(--transition);
+    border: 1px solid var(--white);
 }
 
 .social-icons ul a:hover {
-    background: #044671;
-    border-color: var(--lightGreen);
+    background: var(--lightGreen);
+    border-color: var(--white);
+    border: none;
 }
 
 section{
@@ -143,29 +150,27 @@ section{
 .section-two{
     background: #1b1b1b;
 }
-.section-2-content{
+/* .section-2-content{
     max-width: 800px;
     display: block;
     margin: 0 auto;
-}
+} */
 
 .section-two h2 {
     text-align: center;
     font-size: 40px;
 }
-
+.insta-imgs{
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
 .section-two span a {
     color: var(--lightGreen);
     text-align: center;
     display: block;
     font-size: 20px;
     margin-bottom: 30px;
-}
-
-.insta-imgs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
 }
 
 .insta-imgs>div {
@@ -192,7 +197,7 @@ section{
 footer{
     background: #282323;
     color: var(--white);
-    padding: 20px;
+    padding-top: 15px;
 }
 footer h4{
     margin: 0;
@@ -200,14 +205,22 @@ footer h4{
 }
 footer p{
     text-align: center;
-    margin-top: 20px;
+    padding: 10px;
+    margin: 0;
     line-height: 1.5;
 }
 
 
-.footer a{
+.footer a i{
     color: var(--lightGreen);
-}
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 50%;
+ }
+  footer i:hover{
+    color: white ;
+    background: var(--lightGreen);
+  }
 
 .footer-content{
     display: flex;
@@ -264,6 +277,7 @@ footer p{
 .about-section h3{
     font-size: 64px;
     font-weight: bold;
+    color: var(--lightGreen);
 }
 .about-section h4{
     color: var(--lightGreen);
@@ -289,6 +303,9 @@ footer p{
     min-height: 85vh;
     width: 100%;
 }
+.contacts h2{
+    margin-top:50px;
+}
 .contact-content{
     text-align: center;
     margin-top:80px ;
@@ -300,18 +317,6 @@ footer p{
 
 .contact-content i{
     font-size: 22px;
-}
-.contacts .btn{
-    display: block;
-    margin: 50px auto;
-
-}
-
-.booking   {
-    text-align: center;
-}
-.booking h3 {
-    font-size: 38px;
 }
 
 
@@ -340,19 +345,13 @@ footer p{
         display: block;
         text-align: center;
     }
-    .social-icons{
-        margin-top: 150px;
-    }
     .contact-content {
         text-align: center;
-        margin-top: 150px;
+        margin-top: 80px;
         }
+     .contacts h2{
+        margin-top: 100px;
+    } 
 }
-/* @media (max-width: 1024px){
-    .footer-content{
-        display: block;
-        text-align: center;
-    }
-} */
 
 
